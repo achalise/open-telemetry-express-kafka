@@ -1,0 +1,34 @@
+{
+  "name": "simple-otel-setup",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "user": "tsc && node dist/user-service.js",
+    "devices": "tsc && node dist/device-service.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@opentelemetry/api": "^1.1.0",
+    "@opentelemetry/exporter-jaeger": "^1.2.0",
+    "@opentelemetry/instrumentation": "^0.28.0",
+    "@opentelemetry/instrumentation-express": "^0.28.0",
+    "@opentelemetry/instrumentation-http": "^0.28.0",
+    "@opentelemetry/resources": "^1.2.0",
+    "@opentelemetry/sdk-trace-base": "^1.2.0",
+    "@opentelemetry/sdk-trace-node": "^1.2.0",
+    "@opentelemetry/semantic-conventions": "^1.2.0",
+    "axios": "^0.27.2",
+    "body-parser": "^1.20.0",
+    "express": "^4.18.1",
+    "kafkajs": "^2.0.0",
+    "opentelemetry-instrumentation-kafkajs": "^0.27.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "typescript": "^4.6.4"
+  }
+}

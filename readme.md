@@ -1,0 +1,3 @@
+- create two servers user-service and device-service
+- otel dependencies:
+- `npm i @opentelemetry/api @opentelemetry/exporter-jaeger @opentelemetry/instrumentation @opentelemetry/instrumentation-http @opentelemetry/resources @opentelemetry/semantic-conventions @opentelemetry/sdk-trace-node @opentelemetry/sdk-trace-base @opentelemetry/instrumentation-express -S`
