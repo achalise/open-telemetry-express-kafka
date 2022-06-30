@@ -7,6 +7,8 @@
     "build": "tsc",
     "user": "tsc && node dist/user-service.js",
     "devices": "tsc && node dist/device-service.js",
+    "notificationService": "tsc && node dist/notification-service.js",
+    "emailService": "tsc && node dist/email-service.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

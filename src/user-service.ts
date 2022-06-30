@@ -11,6 +11,10 @@ const port = process.env.PORT || 5000;
 const app = express();
 app.use(bodyParser.json());
 
+KafkaService.consumeMessages('activation-completed', (msg) => {
+  console.log(`Processed message ${JSON.stringify(msg)}`);
+});
+
 app.get('/user/:userid', async (req, resp) => {
   const currentSpan = api.trace.getSpan(api.context.active());
   // display traceid in the terminal

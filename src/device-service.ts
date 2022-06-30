@@ -11,7 +11,10 @@ const app = express();
 app.use(bodyParser.json());
 
 const startUp = async () => {
-  await KafkaService.consumeMessages();
+  await KafkaService.consumeMessages('test-topic', async (msg) => {
+    console.log(`processed message ${msg}`);
+    KafkaService.sendKafkaMessage({value: JSON.stringify({subject: `test email subject`, to: `test recipient`})}, 'send-email');
+  });
 }
 
 startUp();
@@ -36,7 +39,7 @@ app.get('/devices/:userid', (req, resp) => {
 
 app.post(`/device/activate/:deviceid`, async (req, res) => {
   const device = req.body;
-  console.log(`request body ${device}`);
+  console.log(`request body ${JSON.stringify(device)}`);
   await KafkaService.sendKafkaMessage({value: JSON.stringify(device)});
   res.status(200).json({status: 'SUCCESS'});
 });
