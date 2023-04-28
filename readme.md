@@ -17,7 +17,7 @@ Open Telemetry Set up
 `npm install --save @opentelemetry/exporter-trace-otlp-proto`
 
 
-npm install @opentelemetry/api  @opentelemetry/auto-instrumentations-node @opentelemetry/exporter-collector @opentelemetry/exporter-jaeger @opentelemetry/plugin-express @opentelemetry/plugin-http @opentelemetry/propagator-ot-trace @opentelemetry/resources @opentelemetry/sdk-node @opentelemetry/sdk-trace-base @opentelemetry/sdk-trace-node @opentelemetry/semantic-conventions @opentelemetry/tracing --save
+```npm install @opentelemetry/api  @opentelemetry/auto-instrumentations-node @opentelemetry/exporter-collector @opentelemetry/exporter-jaeger @opentelemetry/plugin-express @opentelemetry/plugin-http @opentelemetry/propagator-ot-trace @opentelemetry/resources @opentelemetry/sdk-node @opentelemetry/sdk-trace-base @opentelemetry/sdk-trace-node @opentelemetry/semantic-conventions @opentelemetry/tracing --save```
 
 run jaeger
 
